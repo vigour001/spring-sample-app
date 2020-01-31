@@ -92,7 +92,7 @@ class HomeRestController {
 			rs.close();
 			return res;
 		} catch (SQLException e) {
-			System.out.println("connection url: "+e.getMEssage());
+			System.out.println("connection url: "+e.getMessage());
 			throw new RuntimeException(e);
 		} finally {
 			if (conn != null) {
