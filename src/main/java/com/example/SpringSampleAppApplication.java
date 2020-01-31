@@ -92,8 +92,8 @@ class HomeRestController {
 			rs.close();
 			return res;
 		} catch (SQLException e) {
-			//throw new RuntimeException(e);
-			return "Killed "+ e.getMessage();
+			System.out.println("connection url: "+e.getMEssage());
+			throw new RuntimeException(e);
 		} finally {
 			if (conn != null) {
 				try {
