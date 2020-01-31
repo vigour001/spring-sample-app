@@ -92,7 +92,8 @@ class HomeRestController {
 			rs.close();
 			return res;
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			//throw new RuntimeException(e);
+			return "Killed "+ e.getMessage();
 		} finally {
 			if (conn != null) {
 				try {
